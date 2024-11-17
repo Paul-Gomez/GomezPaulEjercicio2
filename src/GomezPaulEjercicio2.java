@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class ChessBoard {
+public class GomezPaulEjercicio2 {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -20,17 +20,21 @@ public class ChessBoard {
         } while (size < 1 || size > 15);
 
         // Imprimir el tablero de ajedrez
-        for (int i = 0; i < 8; i++) { // 8 filas del tablero
-            for (int row = 0; row < size; row++) { // Altura de cada casilla
-                for (int j = 0; j < 8; j++) { // 8 columnas del tablero
-                    for (int col = 0; col < size; col++) { // Ancho de cada casilla
-
-
+        for (int i = 0; i < 8; i++) { // 8 filas
+            for (int row = 0; row < size; row++) { // Altura casilla
+                for (int j = 0; j < 8; j++) { // 8 columnas
+                    for (int col = 0; col < size; col++) { // Ancho casilla
+                        if ((i + j) % 2 == 0) {
+                            System.out.print(pattern); // Casilla "blanca" con patrón
+                        } else {
+                            System.out.print(" "); // Casilla "negra" como espacio en blanco
+                        }
+                    }
                 }
+                System.out.println();
             }
-            System.out.println();
         }
-    }
 
         scanner.close();
+    }
 }
